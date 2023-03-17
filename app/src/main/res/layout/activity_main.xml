@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C86756"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity"
+    android:layout_marginBottom="-200dp"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/landscape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="300dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/landscape" />
+
+    <ImageView
+        android:id="@+id/minaret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/minaret"
+        app:tint="#1A1630" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ramadan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/minaret"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:lottie_rawRes="@raw/android_eid"
+        app:lottie_autoPlay="true"
+        app:lottie_repeatMode="reverse"
+        app:lottie_loop="true"
+        />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ramadan Kareem"
+        android:textColor="#e6a40b"
+        android:textSize="32sp"
+        android:fontFamily="@font/lobster"
+        android:gravity="center"
+
+        app:layout_constraintTop_toBottomOf="@id/ramadan"
+        tools:layout_editor_absoluteX="70dp" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

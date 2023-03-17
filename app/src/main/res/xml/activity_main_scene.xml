@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+
+        <Constraint
+            android:id="@+id/minaret"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/ramadan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/minaret"
+            android:layout_marginTop="400dp" />
+        <Constraint
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ramadan"
+            app:layout_editor_absoluteX="70dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/minaret"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/minaret"
+            android:layout_marginTop="-50dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteX="80dp"
+            android:layout_width="match_parent"
+            android:id="@+id/ramadan"
+            app:layout_constraintTop_toBottomOf="@+id/minaret"
+            android:layout_marginTop="-350dp" />
+        <Constraint
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteX="70dp"
+            app:layout_constraintTop_toBottomOf="@+id/minaret" />
+    </ConstraintSet>
+
+    <Transition app:constraintSetStart="@+id/start"
+        app:constraintSetEnd="@+id/end">
+
+        <OnSwipe />
+    </Transition>
+</MotionScene>
