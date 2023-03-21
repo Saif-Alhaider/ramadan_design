@@ -31,7 +31,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/minaret"
         app:tint="#1A1630" />
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Swipe Up"
+        android:id="@+id/swipe_up"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:gravity="center"
+        />
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/ramadan"
         android:layout_width="match_parent"
